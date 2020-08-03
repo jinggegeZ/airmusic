@@ -1,0 +1,155 @@
+	<!-- 顶部 -->
+	<view class="top">
+		<image class="top_a" src="{{artist.img1v1Url}}"></image>
+		<view class="top_b">
+			<view class="top_c">
+				<view class="top_d">
+					<!-- <image src="{{obj.profile.avatarUrl}}"></image> -->
+					<!-- 歌手名字 -->
+					<view>{{artist.name}}</view>
+				</view>
+				<view class="mes_part">
+					<view class="mes_part_a">
+						<view class="top_e">歌曲:{{artist.musicSize}}</view>
+						<view class="top_f"><text>专辑: {{artist.albumSize}}</text>| <text>mv: {{artist.mvSize}}</text></view>
+					</view>
+					<view class="mes_part_b">
+						<view bindtap="goinfor">关注</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!--  -->
+	<view class="my">
+		<!-- van-tabs 的点击事件：bind:change="onChange" -->
+		<van-tabs>
+			<van-tab title="主页">
+				<!-- 近期热门 -->
+				<view class="top1">
+					<view class="t1">
+						<view class="n-top1">
+						<view bindtap="goMusicplaying" data-hotSongs="{{hotSongs}}">播放近期热门</view>
+						</view>
+						<view bindtap="godelte">
+							<view class="bg">更多热歌</view>
+						</view>
+					</view>
+				</view>
+				<!-- 歌单 -->
+				<view class="song" wx:for="{{hotSongs}}" wx:key="index" >
+					<view class="left" bindtap="gomusicplaying" data-hotSongs="{{hotSongs}}" data-item="{{item}}" data-index="{{index}}">
+						<view>
+							<image class="leftpick" src="{{item.al.picUrl}}"></image>
+						</view>
+						<view>
+							<view class="name">{{item.name}}</view>
+							<view class="titil">{{item.ar[0].name}}--<text>{{item.al.name}}</text></view>
+						</view>
+					</view>
+					<view class="right">
+						<view wx:if="{{item.mv != 0}}" bindtap="goliveshow" data-item="{{item}}">
+							<image class="leftpic" src="../../images/mv.png"></image>
+						</view>
+						<view>
+							<image class="leftpic" src="../../images/more.png"></image>
+						</view>
+					</view>
+				</view>
+				<!-- 查看全部单曲 -->
+				<view class="weiba">
+					<view>查看更多热门单曲</view>
+				</view>
+				<!-- 歌手信息 -->
+				<view class="top1">
+					<view class="t1">
+						<view class="n-top1">
+							<view>歌手信息</view>
+						</view>
+						<view bindtap="godelte">
+							<view class="bg">更多信息</view>
+						</view>
+					</view>
+				</view>
+				<!-- 信息简述 -->
+				<view class="singerbox">
+					<view class="singerbox1">
+						<view class="fonta">{{artist.briefDesc}}</view>
+					</view>
+				</view>
+			</van-tab>
+
+			<van-tab title="歌曲">
+				<!-- 近期热门 -->
+				<view class="top1">
+					<view class="t1">
+						<view class="n-top1">
+							<view data-hotSongs1="{{hotSongs1}}" bindtap="goMusicplaying">近期热门50首</view>
+						</view>
+						<view bindtap="godelte">
+							<view class="bg">播放全部</view>
+						</view>
+					</view>
+				</view>
+				<!-- 歌单 -->
+				<view class="song" wx:for="{{hotSongs1}}" wx:key="index" bindtap="gomusicplaying" data-hotSongs1="{{hotSongs1}}" data-item="{{item}}" data-index="{{index}}">
+					<view class="left">
+						<view>
+							<image class="leftpick" src="{{item.al.picUrl}}"></image>
+						</view>
+						<view>
+							<view class="name">{{item.name}}</view>
+							<view class="titil">{{item.ar[0].name}} <text>{{item.ar[1].name}}</text></view>
+						</view>
+					</view>
+					<view class="right">
+						<view>
+							<image class="leftpic" src="../../images/more.png"></image>
+						</view>
+					</view>
+				</view>
+			</van-tab>
+			<van-tab title="专辑">
+					<view class="top1">
+					<view class="t1">
+						<view class="n-top1">
+							<view>按发布时间排序</view>
+						</view>
+						<view bindtap="godelte">
+							<view class="bg">排序</view>
+						</view>
+					</view>
+				</view>
+				<view class="nav">
+					<view class="imhg" wx:for="{{hotAlbum}}" wx:key="index">
+						<image class="img" src="{{item.blurPicUrl}}"></image>
+						<image class="bgd" src="../../images/coverall.png"></image>
+						<view class="fontb">{{item.name}}</view>
+						<view class="fontbb">{{item.publishTime}}</view>
+					</view>
+				</view>
+			</van-tab>
+			<van-tab title="视频">
+				<!--视频列表 -->
+				<view class="sheet_y" wx:for="{{mvs}}" wx:key="key" wx:key="index">
+					<view class="sheet_f">
+						<view class="sheet_g">
+							<image src="{{item.imgurl16v9}}"></image>
+						</view>
+					</view>
+					<view class="sheet_x">
+						<view class="sheet_r">
+							<view class="sheet_w">
+								<view class="name">{{item.name}}</view>
+								<!-- <view class="titil"><text>{{item.trackCount}}</text>首 by<text>{{item.creator.nickname}}</text><text>播放 {{item.playCount/10000}}万次</text></view> -->
+								<view class="titil">{{item.artistName}}--<text class="titil">{{item.publishTime}}</text>--<text>播放 {{item.playCount/10000}}万次</text></view>
+							</view>
+						</view>
+					</view>
+				</view>
+
+
+
+			</van-tab>
+		</van-tabs>
+	</view>

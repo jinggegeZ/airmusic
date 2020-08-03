@@ -1,0 +1,231 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": false,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": false,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.12.0",
+	"appid": "wx5ce2764e546f8155",
+	"projectname": "Airclound",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/singer/singer",
+					"pathName": "pages/singer/singer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/airclound/airclound",
+					"pathName": "pages/airclound/airclound",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/morenewcd/morenewcd",
+					"pathName": "pages/morenewcd/morenewcd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/airclound/airclound",
+					"pathName": "pages/airclound/airclound",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/morenewsong/morenewsong",
+					"pathName": "pages/morenewsong/morenewsong",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods/goods",
+					"pathName": "pages/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/songSheet/songSheet",
+					"pathName": "pages/songSheet/songSheet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/ranking/ranking",
+					"pathName": "pages/ranking/ranking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/radioStation/radioStation",
+					"pathName": "pages/radioStation/radioStation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/radioStation/radioStation",
+					"pathName": "pages/radioStation/radioStation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/liveshow/liveshow",
+					"pathName": "pages/liveshow/liveshow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/liveshow/liveshow",
+					"pathName": "pages/liveshow/liveshow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/infor/infor",
+					"pathName": "pages/infor/infor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/register/register",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/singerInformation/singerInformation",
+					"pathName": "pages/singerInformation/singerInformation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/listDetails/listDetails",
+					"pathName": "pages/listDetails/listDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/musicPlaying/musicPlaying",
+					"pathName": "pages/musicPlaying/musicPlaying",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/singer/singer",
+					"pathName": "pages/singer/singer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/singer/singer",
+					"pathName": "pages/singer/singer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/liveshow/liveshow",
+					"pathName": "pages/liveshow/liveshow",
+					"scene": null
+				}
+			]
+		}
+	}
+}

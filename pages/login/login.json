@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-tab": "../../lib/vant/tab/index",
+    "van-tabs": "../../lib/vant/tabs/index",
+    "van-field": "../../lib/vant/field/index",
+    "van-button": "../../lib/vant/button/index"
+  }
+}

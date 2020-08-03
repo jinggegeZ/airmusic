@@ -1,0 +1,50 @@
+.singer{
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx;
+}
+.singer_a{
+  width: 94%;
+}
+.singer_b{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 160rpx;
+}
+.singer_c{
+  display: flex;
+  align-items: center;
+}
+.singer_d{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 30rpx;
+  border-radius: 50%;
+}
+.singer_e{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 15rpx;
+}
+.singer_f{
+  color: #C20C0C;
+  border-radius: 30rpx;
+  width: 140rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #C20C0C;
+}
+.singer_f text{
+  font-size: 46rpx;
+}
+.singer_g{
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+}
+.singer_g view{
+  min-width: 80rpx;
+}

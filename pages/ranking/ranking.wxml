@@ -1,0 +1,37 @@
+<view class="content">
+	<view class="content_c">
+		<!-- 榜单推荐 -->
+		<view class="sheet_b">
+			<view class="sheet_c">榜单推荐</view>
+		</view>
+		<view class="sheet_e">
+			<view class="sheet_f" wx:for="{{arr}}" wx:key="index">
+				<view class="sheet_g">
+					<image src="{{item.coverImgUrl}}"></image>
+					<view class="sheet_z">{{item.updateFrequency}}</view>
+				</view>
+				<view class="sheet_h">{{item.name}}</view>
+			</view>
+		</view>
+		<!-- 官方榜 -->
+		<view class="sheet_b">
+			<view class="sheet_c sheet_11">官方榜</view>
+		</view>
+		<view class="sheet_y" wx:for="{{arr1}}" wx:key="key" wx:key="index">
+			<view class="sheet_f">
+				<view class="sheet_g">
+					<image src="{{item.coverImgUrl}}"></image>
+					<view class="sheet_z">{{item.updateFrequency}}</view>
+				</view>
+			</view>
+			<view class="sheet_x">
+				<view class="sheet_r">
+					<view class="sheet_w" wx:for="{{item.tracks}}" wx:key="key" wx:key="index1" wx:for-item="item1" wx:for-key="index1">
+						<text>{{item1.first}}</text> -
+						<text>{{item1.second}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

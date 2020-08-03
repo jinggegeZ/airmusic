@@ -1,0 +1,34 @@
+<van-tabs animated>
+	<van-tab title="手机号登录 ">
+		<view class="nav">
+			<view class="nbox">
+				<view>
+					<van-cell-group>
+						<van-field value="{{ phone }}" bind:input="phone" left-icon="phone-o" input-align="center" required label="手机号" placeholder="请输入用户名" />
+						<van-field value="{{ password }}" bind:input="password"  left-icon="user-circle-o" type="password" input-align="center" required label="密码" placeholder="请输入密码" border="{{ false }}" />
+					</van-cell-group>
+				</view>
+			</view>
+		</view>
+		<view class="foot">
+			<view class="foot1"><van-button bindtap="login" type="primary">立即登录</van-button></view>
+			<view class="foot1"><van-button  type="warning" bindtap="goregister">立即注册</van-button></view>
+		</view>
+	</van-tab>
+	<van-tab title="邮箱登录">
+	<view class="nav">
+			<view class="nbox">
+				<view>
+					<van-cell-group>
+						<van-field value="{{ email }}" bind-input="email" input-align="center" required label="邮箱" placeholder="请输入网易邮箱" />
+						<van-field value="{{ password }}" bind-input="password" left-icon="user-circle-o" input-align="center" required label="密码" placeholder="请输入密码" border="{{ false }}" />
+					</van-cell-group>
+				</view>
+			</view>
+		</view>
+		<view class="foot">
+			<view class="foot1"><van-button type="primary">立即登录</van-button></view>
+			<view class="foot1"><van-button  type="warning" bindtap="goregister">立即注册</van-button></view>
+		</view>
+	</van-tab>
+</van-tabs>

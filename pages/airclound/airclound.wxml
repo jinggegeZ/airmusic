@@ -1,0 +1,105 @@
+<view class="content" wx:if="{{flag === false}}">
+	<view class="content-c">
+		<!-- 头部 -->
+		<view class="top">
+			<view class="top-1">
+				<view>音乐馆</view>
+				<view class="ipnt">
+					<van-search shape="round" input-align="center" value="{{ value }}" placeholder="搜索" bind:focus="onSearch" />
+				</view>
+				<view>
+					<image class="img" src="../../images/music.png"></image>
+				</view>
+			</view>
+		</view>
+		<!-- 轮播 -->
+		<swiper arr="{{arr}}"></swiper>
+		<!-- 推荐 -->
+		<recommend></recommend>
+		<!-- 每日推荐 -->
+		<song arr1="{{arr1}}"></song>
+		<!-- 新歌推荐 -->
+		<new arr4="{{arr4}}" arr3="{{arr3}}"></new>
+		<!-- 音乐新势力 -->
+		<newMusic arr2="{{arr2}}"></newMusic>
+		<!-- 推荐电台 -->
+		<restiations arr5="{{arr5}}"></restiations>
+		<!-- 推荐节目 -->
+		<reprograms arr6="{{arr6}}"></reprograms>
+	</view>
+</view>
+
+<!-- 搜索页面 -->
+<view wx:else>
+	<view class="content">
+		<view class="content-c">
+			<!-- 搜索 -->
+			<view class="top">
+				<view class="top-2">
+					<view>
+						<image bindtap="goback" class="img" src="../../images/back.png"></image>
+					</view>
+					<view class="ipnt">
+						<van-search shape="round" value="{{ value1 }}" placeholder="{{pchohled}}" bind:change="onSearch1" size="large" />
+					</view>
+					<!-- 搜索框内有值进行数据渲染 -->
+					<view class="top-3" wx:if="{{value1}}">
+						<view class="top-4">
+							<!-- 展示搜索实时变化 -->
+							<view class="top-5">
+								<view class="top-5font">您当前搜索的内容是：</view>
+								<view class="top-5font1"> '{{value1}}'</view>
+							</view>
+							<!-- 实时渲染相关数据 -->
+							<view class="top-6" wx:for="{{abb}}" wx:key="index" bindtap="gosearch" data-keyword="{{item.keyword}}" data-type="{{item.type}}">
+								<view class="top-7">
+									<image class="img" src="../../images/ser.png"></image>
+								</view>
+								<view>{{item.keyword}}</view>
+							</view>
+						</view>
+					</view>
+					<view>
+						<image bindtap="gomy" class="img" src="../../images/gomy.png"></image>
+					</view>
+				</view>
+			</view>
+			<!-- 历史记录 -->
+			<view class="top1">
+				<view class="t1">
+					<view class="n-top1">
+						<view>历史记录</view>
+					</view>
+					<view bindtap="godelte">
+						<image class="img" src="../../images/clear.png"></image>
+					</view>
+				</view>
+			</view>
+			<!-- 历史记录横向轮播 -->
+			<scroll-view scroll-x="{{true}}" style="width: 100%;">
+				<view class="d-f">
+					<view id="demo1" wx:for="{{acc}}" wx:key="index" bindtap="gosearchto" data-item="{{item}}">
+						<view class="value">
+							<view class="box1">{{item}}</view>
+						</view>
+					</view>
+				</view>
+			</scroll-view>
+			<view class="top1">
+				<view class="t1">
+					<view class="n-top1">
+						<view>热搜榜</view>
+					</view>
+				</view>
+			</view>
+			<view class="box2" wx:for="{{hotseatch}}" wx:key="index" bindtap="goserach" data-item="{{item}}">
+				<view class="fontbox2 {{index <3 ? 'active':''}} ">{{index+1}}</view>
+				<view class="box3">
+					<view>{{item.searchWord}} <text class="hotfont" wx:if="{{item.iconType}}">Hot</text></view>
+					<view class="box3font">{{item.content}}</view>
+				</view>
+				<view class="hotfont1">{{item.score}}</view>
+			</view>
+		</view>
+	</view>
+</view>

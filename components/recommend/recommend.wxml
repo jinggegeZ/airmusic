@@ -1,0 +1,22 @@
+<view class="recommend">
+  <view>
+    <view class="font">推荐</view>
+    <view class="img1" bindtap="gogoods"><image class="img" src="../../images/recommend.png"></image></view>
+  </view>
+  <view>
+    <view class="font">歌单</view>
+    <view class="img1" bindtap="gosongSheet"><image class="img" src="../../images/gedan.png"></image></view>
+  </view>
+  <view>
+    <view class="font">排行</view>
+    <view class="img1" bindtap="goranking"><image class="img" src="../../images/rank.png"></image></view>
+  </view>
+  <view>
+  <view class="font">电台</view>
+  <view class="img1" bindtap="goradioStation"><image class="img" src="../../images/diantai.png"></image></view>
+  </view>
+  <view>
+  <view class="font">视频</view>
+  <view class="img1" bindtap="goliveshow"><image class="img" src="../../images/live.png"></image></view>
+  </view>
+</view>

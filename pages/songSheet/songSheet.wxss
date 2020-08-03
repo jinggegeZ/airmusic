@@ -1,0 +1,60 @@
+.sstop {
+  width: 100%;
+
+}
+
+.rotationChart {
+  text-align: center;
+  padding: 20rpx;
+}
+
+.swiper,
+.swiper-item {
+  height: 280rpx ! important;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 280rpx ! important;
+  border-radius: 20rpx 20rpx;
+  position: relative;
+}
+
+.a {
+  position: relative;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.img {
+  width: 100%;
+  height: 220rpx;
+  border-radius: 15rpx;
+}
+.imhg {
+  width: 30%;
+  margin-top: 30rpx;
+  position: relative;
+}
+.font {
+  font-size: 14px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.n-top {
+  position: absolute;
+  top: 0;
+  right: 10rpx;
+  color: white;
+  font-size: 12px;
+}
+.icon {
+  width: 20rpx;
+  height: 20rpx;
+}

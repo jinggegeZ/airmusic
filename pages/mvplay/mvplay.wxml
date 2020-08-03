@@ -1,0 +1,11 @@
+<view class="video">
+	<!-- 视频 -->
+	<view class="video_a">
+		<view class="video_b">
+			<view class="video_c">
+				<video class="video_part" src="{{url}}"></video>
+			</view>
+			<view class="video_i">视频名字</view>
+		</view>
+	</view>
+</view>

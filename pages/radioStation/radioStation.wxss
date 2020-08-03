@@ -1,0 +1,257 @@
+.content {
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx;
+}
+.content-c {
+  width: 95%;
+}
+.rotationChart {
+  text-align: center;
+  padding: 10rpx;
+}
+.swiper,
+.swiper-item {
+    height: 280rpx ! important;
+}
+.swiper-image {
+  width: 95%;
+  height: 280rpx ! important;
+  border-radius: 20rpx 20rpx;
+  position: relative;
+}
+.a {
+  position: relative;
+}
+.bot {
+padding: 15rpx;
+position: absolute;
+bottom: 0;
+right: 18rpx;
+background: red;
+color: white;
+font-size: 12px;
+height: 30rpx;
+z-index: 99;
+border-radius: 10rpx;
+}
+.bd {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bdimg {
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50rpx;
+}
+.bfimg {
+  width: 50rpx;
+  height: 50rpx;
+}
+.book {
+  width: 100rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.top {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.top1 {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color:rgb(247, 222, 84);
+}
+.t {
+  width: 95%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.n-top {
+  display: flex;
+  align-items: flex-end;
+}
+.ntpbc {
+  font-size: 10px;
+  margin-bottom: 5rpx;
+  margin-left: 10rpx;
+}
+.bc {
+  
+  display: flex;
+  align-items: center;
+}
+.bcimg {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 12rpx;
+}
+.bcimg1 {
+  width: 40rpx;
+  height: 40rpx;
+}
+.bg {
+  width: 150rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  font-size: 14px;
+  border: 1px solid #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg1 {
+  width: 150rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  font-size: 12px;
+  border: 1px solid #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.img {
+  width: 95%;
+  height: 210rpx;
+  border-radius: 15rpx;
+}
+.imhg {
+  width: 30%;
+  margin-top: 10rpx;
+  position: relative;
+}
+.font {
+  font-size: 14px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.fonta {
+  font-size: 14px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.font1 {
+  font-size: 14px;
+  color: red;
+}
+.newsong {
+  margin-right: 10rpx;
+}
+.active {
+  font-weight: 700;
+  font-size: 18px;
+}
+.song {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.right {
+  display: flex;
+
+}
+.leftpic {
+  width: 30rpx;
+  height:30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.rightbg {
+  width: 50rpx;
+  height:50rpx;
+  border-radius: 25rpx;
+  border: 1px solid #dddddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftpick {
+  width: 100rpx;
+  height:100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+  border-radius: 10rpx;
+}
+.name {
+  font-size: 16px;
+}
+.titil {
+  font-size: 12px;
+  margin-top: 10rpx;
+  display: flex;
+}
+.touxiang {
+  width: 30rpx;
+  height: 30rpx;
+  display: flex;
+  border-radius: 5rpx;
+}
+/* 电台分类 */
+.radio {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+.rdbox {
+  width: 50%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px dotted #dddddd;
+
+}
+.rdbox1 {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.rdimg {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}

@@ -1,0 +1,65 @@
+<view class="content">
+	<view class="content_c">
+		<van-tabs bind:change="onChange">
+			<van-tab title="推荐">
+				<!-- mlog-->
+				<!-- <view class="top">
+					<view class="t">
+						<view class="n-top">
+							<view>mv精选</view>
+						</view>
+						<view class="bg" bindtap="gonewsong">更多mv</view>
+					</view>
+				</view> -->
+				<!-- MLog详情 -->
+				<view class="mlog">
+					<view class="mlogbox" wx:for="{{mlogs}}" wx:key='index'>
+						<!-- 视频模块 -->
+						<view class="mlogimg">
+							<image class="mlogimg1" src="{{item.picUrl}}" bindtap="gomvplay" data-item="{{item}}"></image>
+						</view>
+						<view class="mlfont">{{item.name}}</view>
+						<view class="mlfont">{{item.artistName}}</view>
+					</view>
+				</view>
+			</van-tab>
+			<van-tab title="最新">
+				<view class="mlog">
+					<view class="mlogbox" wx:for="{{newmv}}" wx:key='index'>
+						<!-- 视频模块 -->
+						<view class="mlogimg">
+							<image class="mlogimg1" src="{{item.cover}}" bindtap="gomvplay" data-item="{{item}}"></image>
+						</view>
+						<view class="mlfont">{{item.name}}</view>
+						<view class="mlfont">{{item.artistName}}</view>
+					</view>
+				</view>
+			</van-tab>
+			<van-tab title="网易出品">
+				<view class="mlog">
+					<view class="mlogbox" wx:for="{{wangyimv}}" wx:key='index'>
+						<!-- 视频模块 -->
+						<view class="mlogimg">
+							<image class="mlogimg1" src="{{item.cover}}" bindtap="gomvplay" data-item="{{item}}"></image>
+						</view>
+						<view class="mlfont">{{item.name}}</view>
+						<view class="mlfont">{{item.artistName}}</view>
+					</view>
+				</view>
+			</van-tab>
+			<van-tab title="mv">
+				<view class="video">
+					<!-- 视频 -->
+					<view class="video_a">
+						<view class="video_b">
+							<view class="video_c">
+								<video class="video_part" src="{{url}}"></video>
+							</view>
+							<view class="video_i">视频名字</view>
+						</view>
+					</view>
+				</view>
+			</van-tab>
+		</van-tabs>
+	</view>
+</view>

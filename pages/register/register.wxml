@@ -1,0 +1,22 @@
+<view class="nav">
+	<view class="nbox">
+		<view>
+			<van-cell-group>
+				<van-field value="{{ phone }}" left-icon="phone-o" input-align="center" required label="手机号" placeholder="请输入用户名" />
+				<van-field value="{{ password }}" left-icon="user-circle-o" input-align="center" required label="密码" placeholder="请输入密码" border="{{ false }}" />
+				<van-field value="{{ sms }}" left-icon="chat-o" required center clearable label="短信验证码" placeholder="请输入短信验证码" border="{{ false }}" use-button-slot>
+					<van-button slot="button" size="small" type="primary">发送验证码</van-button>
+				</van-field>
+				<van-field value="{{ nickname }}" left-icon="smile-o" required clearable label="昵称" icon="question-o" placeholder="请输入昵称" bind:click-icon="onClickIcon" />
+			</van-cell-group>
+		</view>
+	</view>
+</view>
+<view class="foot">
+	<view class="foot1">
+		<van-button type="primary" bindtap="gologin">已有账号立即登录</van-button>
+	</view>
+	<view class="foot1">
+		<van-button type="warning" bindtap="goregister">立即注册</van-button>
+	</view>
+</view>

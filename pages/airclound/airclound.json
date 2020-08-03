@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-tab": "../../lib/vant/tab/index",
+    "van-tabs": "../../lib/vant/tabs/index",
+    "van-search": "../../lib/vant/search/index",
+    "swiper" : "../../components/swiper/swiper",
+    "recommend":"../../components/recommend/recommend",
+    "song":"../../components/song/song",
+    "new" :"../../components/new/new",
+    "newMusic" : "../../components/newMusic/newMusic",
+    "restiations":"../../components/restiations/restiations",
+    "reprograms":"../../components/reprograms/reprograms"
+  }
+}

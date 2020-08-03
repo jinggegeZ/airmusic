@@ -1,0 +1,168 @@
+<view class="content">
+	<view class="content-c">
+		<!-- 轮播 -->
+		<view class="rotationChart">
+			<swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+				<swiper-item wx:for="{{arr}}" wx:key="index" class="swiper-item">
+					<view class="a">
+						<image class="swiper-image" src="{{item.pic}}" mode="widthFix" />
+						<!-- <view class="bot">{{item.typeTitle}}</view> -->
+					</view>
+				</swiper-item>
+			</swiper>
+		</view>
+		<!-- 中间导航栏 -->
+		<view class="bd">
+			<view>
+				<view class="bdimg">
+					<image class="bfimg" src="../../images/home.png"></image>
+				</view>
+				<view class="book">电台分类</view>
+			</view>
+			<view>
+				<view class="bdimg">
+					<image class="bfimg" src="../../images/radiorank.png"></image>
+				</view>
+				<view class="book">电台排行</view>
+			</view>
+			<view>
+				<view class="bdimg">
+					<image class="bfimg" src="../../images/pay.png"></image>
+				</view>
+				<view class="book">付费精品</view>
+			</view>
+			<view>
+				<view class="bdimg">
+					<image class="bfimg" src="../../images/school.png"></image>
+				</view>
+				<view class="book">主播学院</view>
+			</view>
+		</view>
+		<!-- 电台推荐 -->
+		<view class="top">
+			<view class="t">
+				<view class="n-top">
+					<view>推荐电台</view>
+				</view>
+				<view class="bc">
+					<view>
+						<image class="bcimg" src="../../images/remove.png"></image>
+					</view>
+					<view class="bg">换一换</view>
+				</view>
+			</view>
+		</view>
+		<view class="nav">
+			<view class="imhg" wx:for="{{arr1}}" wx:key="index">
+				<view>
+					<image class="img" src="{{item.picUrl}}"></image>
+				</view>
+				<view class="font">{{item.name}}</view>
+				<view class="font">{{item.copywriter}}</view>
+			</view>
+		</view>
+		<!-- 精品推荐 -->
+		<view class="top1">
+			<view class="t">
+				<view class="n-top">
+					<view>精品推荐</view>
+					<view class="ntpbc">你值得拥有的优质内容</view>
+				</view>
+				<view>
+					<view class="bg">全部精品</view>
+				</view>
+			</view>
+		</view>
+		<view class="nav">
+			<view class="imhg" wx:for="{{arr2}}" wx:key="index">
+				<view>
+					<image class="img" src="{{item.picUrl}}"></image>
+				</view>
+				<view class="fonta">{{item.rcmdText}}</view>
+				<view class="font1">￥{{item.originalPrice/100}}</view>
+			</view>
+		</view>
+		<!-- 翻唱 -->
+		<view class="top">
+			<view class="t">
+				<view class="n-top">
+					<view>翻唱|创作</view>
+				</view>
+				<view class="bc">
+					<view>
+						<image class="bcimg" src="../../images/remove.png"></image>
+					</view>
+					<view class="bg">换一换</view>
+				</view>
+			</view>
+		</view>
+		<view class="song" wx:for="{{arr3}}" wx:key="index">
+			<view class="left">
+				<view>
+					<image class="leftpick" src="{{item.picUrl}}"></image>
+				</view>
+				<view>
+					<view class="name">{{item.rcmdtext}}</view>
+					<view class="titil">
+						<image class="touxiang" src="{{item.dj.avatarUrl}}"></image>{{item.name}}
+					</view>
+				</view>
+			</view>
+			<view class="right">
+				<view class="rightbg">
+					<image class="leftpic" src="../../images/play3.png"></image>
+				</view>
+			</view>
+		</view>
+		<!-- 热门分类 -->
+		<view class="top">
+			<view class="t">
+				<view class="n-top">
+					<view>热门分类</view>
+				</view>
+				<view class="bc">
+					<!-- <view>
+						<image class="bcimg" src="../../images/remove.png"></image>
+					</view> -->
+					<!-- <view class="bg">换一换</view> -->
+				</view>
+			</view>
+		</view>
+		<view class="radio">
+				<view class="rdbox" wx:for="{{arr4}}" wx:key="index">
+				<view class="rdbox1">
+				<view><image class="rdimg" src="{{item.pic56x56Url}}"></image></view>
+				<view>{{item.name}}</view>
+				</view>
+				</view>
+		</view>
+				<!-- 更多分类 -->
+		<view class="top">
+			<view class="t">
+				<view class="n-top">
+					<view>更多分类</view>
+				</view>
+				<view class="bc">
+					<!-- <view>
+						<image class="bcimg" src="../../images/remove.png"></image>
+					</view> -->
+					<!-- <view class="bg">换一换</view> -->
+				</view>
+			</view>
+		</view>
+		<view class="radio">
+				<view class="rdbox" wx:for="{{arr5}}" wx:key="index">
+				<view class="rdbox1">
+				<view><image class="rdimg" src="{{item.pic56x56Url}}"></image></view>
+				<view>{{item.name}}</view>
+				</view>
+				</view>
+		</view>
+
+
+
+
+
+
+	</view>
+</view>

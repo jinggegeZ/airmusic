@@ -1,0 +1,106 @@
+<view wx:if="{{id === ''}}">
+	您还没有登录哟
+	<van-button type="primary" bindtap="gologin">立即登录</van-button>
+</view>
+<view wx:else>
+	<!-- 顶部 -->
+	<view class="top">
+		<image class="top_a" src="{{obj.profile.backgroundUrl}}"></image>
+		<view class="top_b">
+			<view class="top_c">
+				<view class="top_d">
+					<image src="{{obj.profile.avatarUrl}}"></image>
+				</view>
+				<view class="mes_part">
+					<view class="mes_part_a">
+						<view class="top_e">{{obj.profile.nickname}}</view>
+						<view class="top_f"><text>关注 {{obj.profile.follows}}</text>| <text>粉丝 {{obj.profile.followeds}}</text></view>
+						<view class="top_g">
+							<view class="top_h" wx:if="{{obj.profile.vipType == 11}}">
+								<image src="../../images/vip.png"></image>
+							</view>
+							<view class="top_i">
+								<text wx:if="{{obj.profile.gender == 2}}">女</text>
+								<text wx:else>男</text>
+								90后
+							</view>
+							<view class="top_k">lv.{{obj.level}}</view>
+						</view>
+					</view>
+					<view class="mes_part_b">
+						<view bindtap="goinfor">编辑</view>
+						<view>退出</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!--  -->
+	<view class="my">
+		<!-- van-tabs 的点击事件：bind:change="onChange" -->
+		<van-tabs>
+			<van-tab title="主页">
+				<view class="my_a">
+					<view class="my_b">
+						<!-- 听歌排行 -->
+						<view class="my_c">
+							<view class="my_d">
+								<image src="../../images/radiorank.png"></image>
+							</view>
+							<view class="my_f">
+								<view>
+									<view>听歌排行</view>
+									<view class="my_e">累计听歌{{obj.listenSongs}}首</view>
+								</view>
+							</view>
+						</view>
+						<!-- 歌单列表 -->
+						<view class="songlist">
+							<view class="songlist_a">创建的歌单 <text>(16个，被收藏2次)</text></view>
+						</view>
+						<!-- 喜欢的音乐 -->
+						<view class="my_c" wx:for="{{arr}}" wx:key="index">
+							<view class="my_d1">
+								<image src="{{item.coverImgUrl}}"></image>
+							</view>
+							<view class="my_f">
+								<view>
+									<view>{{item.name}}</view>
+									<view class="my_e">{{item.trackCount}}首，播放{{item.playCount}}次</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</van-tab>
+			<van-tab title="动态">
+				<view class="move">
+					<view class="move_a" wx:for="{{arr2}}" wx:key="index">
+						<view class="move_b">
+							<view class="move_c">
+								<image src="{{item.user.avatarUrl}}"></image>
+							</view>
+							<view class="move_d">
+								<view> {{item.user.nickname}} 
+								<image wx:if="{{item.user.vipType == 11}}"  src="../../images/vip.png"></image>
+								 <text wx:if="{{item.type == 18}}">分享单曲</text>
+								<text wx:if="{{item.type == 19}}">分享专辑</text>
+								<text wx:if="{{item.type == 17 || item.type == 28}}">分享电台节目</text>
+								<text wx:if="{{item.type == 22}}">转发</text>
+								<text wx:if="{{item.type == 39}}">发布视频</text>
+								<text wx:if="{{item.type == 35 || item.type == 13}}">分享歌单</text>
+								<text wx:if="{{item.type == 24}}">分享专栏文章</text>
+								<text wx:if="{{item.type == 41 || item.type == 21}}">分享视频</text>
+								 </view>
+								<view>日期</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- <view >
+				{{item.user.nickname}}
+				</view> -->
+			</van-tab>
+		</van-tabs>
+	</view>
+</view>

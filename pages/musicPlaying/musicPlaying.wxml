@@ -1,0 +1,135 @@
+<view class="box">
+	<view class="box1" style="background:url({{al.al.picUrl}})">
+		<view class="bei">
+			<!-- 头部信息 -->
+			<view class="top">
+				<view class="top1">
+					<view class="topa">
+						<view>
+							<image class="img" src="../../images/whiteback.png"></image>
+						</view>
+						<view>
+							<view class="font1">{{al.name}}</view>
+							<view class="fonta">{{ar.name}}</view>
+						</view>
+					</view>
+					<view>
+						<image class="img" src="../../images/fenxiang.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="play">
+				<view wx:if="{{flag === true}}">
+					<!-- 歌曲图片信息 -->
+					<view class="nav" bindtap="viewLyrics">
+						<view class="navbox">
+							<view>
+							<!-- 歌曲图片动画三木运算 -->
+								<image class="nbbox {{flag1 === false ? 'active':''}}" src="{{al.al.picUrl}}"></image>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view wx:else class="elbox">
+					<scroll-view scroll-top="{{scrollTop}}" scroll-y="{{true}}" style="height: 100%;" scroll-with-animation="{{true}}">
+						<view class="nav1" bindtap="viewPicture">
+							<!-- 三元运算符 -->
+							<view class="{{currentIndex === index?'cc':''}}" id="demo1" wx:for="{{lyricArray}}" wx:key="index">
+								{{item[1]}}
+							</view>
+						</view>
+					</scroll-view>
+				</view>
+			</view>
+			<!-- 尾部导航栏1 -->
+			<view class="foot1">
+				<view class="foot1-1">
+					<view>
+						<image class="img1" src="../../images/jiaruxindong.png"></image>
+					</view>
+					<view>
+						<image class="img1" src="../../images/lijixiazai.png"></image>
+					</view>
+					<view>
+						<image class="img1" src="../../images/shejilingsheng.png"></image>
+					</view>
+					<view>
+						<image class="img1" src="../../images/gequpinglun.png"></image>
+					</view>
+					<view>
+						<image class="img1" src="../../images/yiqiting.png"></image>
+					</view>
+				</view>
+			</view>
+			<!-- 歌曲进度条 -->
+			<view class="foot2">
+				<view class="foot2-1">
+					<view class="foot2-1-font">{{playTime}}</view>
+					<van-slider style="width:65%" value="{{move}}"  max="{{max}}" bind:change="onChange" active-color="#1989fa" />
+					<view class="foot2-1-font2">{{endTime}}</view>
+				</view>
+			</view>
+			<!-- 尾部导航栏2  -->
+			<view class="foot3">
+				<view class="foot3-1">
+					<!-- 播放模式 -->
+					<view wx:if="{{b === 1}}">
+						<image class="img1" bindtap="b1" src="../../images/liebiaoxunhuan.png"></image>
+					</view>
+					<view wx:if="{{b === 2}}">
+						<image class="img1" bindtap="b2" src="../../images/danquxunhuan (1).png"></image>
+					</view>
+					<view wx:if="{{b === 3}}">
+						<image class="img1" bindtap="b3" src="../../images/suijibofnag.png"></image>
+					</view>
+					<view wx:if="{{b === 4}}">
+						<image class="img1" bindtap="b4" src="../../images/xindngmoshi.png"></image>
+					</view>
+					<view>
+						<image class="img1" src="../../images/shangyiqu.png" bindtap="changeleft"></image>
+					</view>
+					<!-- 播放按钮 -->
+					<view wx:if="{{a === 1}}">
+						<image class="img2" src="../../images/bigplay.png" bindtap="play"></image>
+					</view>
+					<!-- 暂停按钮 -->
+					<view wx:else>
+						<image class="img2" src="../../images/zanting.png" bindtap="zanting"></image>
+					</view>
+					<view>
+						<image class="img1" src="../../images/xiayiqu.png" bindtap="changeright"></image>
+					</view>
+					<view>
+						<image class="img1" src="../../images/gedna.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</view>
+</view>

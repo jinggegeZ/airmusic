@@ -1,0 +1,30 @@
+
+.rotationChart {
+  text-align: center;
+  padding: 20rpx;
+}
+.swiper,
+.swiper-item {
+    height: 280rpx ! important;
+}
+.swiper-image {
+  width: 95%;
+  height: 280rpx ! important;
+  border-radius: 20rpx 20rpx;
+  position: relative;
+}
+.a {
+  position: relative;
+}
+.bot {
+padding: 15rpx;
+position: absolute;
+bottom: 0;
+right: 18rpx;
+background: red;
+color: white;
+font-size: 12px;
+height: 30rpx;
+z-index: 99;
+border-radius: 10rpx;
+}

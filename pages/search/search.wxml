@@ -1,0 +1,308 @@
+<view class="content">
+	<view class="content-c">
+		<!-- 头部搜索 -->
+		<view class="top1">
+			<view>
+				<image bindtap="goback" class="img" src="../../images/back.png"></image>
+			</view>
+			<view class="ipt">
+				<input value="{{value}}" type="text" />
+				<image class="img right" src="../../images/delte.png"></image>
+			</view>
+		</view>
+		<!-- 搜索详情 -->
+		<van-tabs animated>
+			<van-tab title="综合">
+		<!-- 您可能感兴趣 -->
+				<view class="box1">
+					<view class="box2">您可能感兴趣</view>
+				</view>
+				<view class="box1">
+					<view class="box3">
+		<!-- 歌手信息显示 -->
+						<view class="box4"  bindtap="gosingerInformation" data-id="{{id}}">
+							<view class="box5">
+								<image class="img1" src="{{artist.img1v1Url}}"></image>
+							</view>
+							<view class="fontsize">
+								<view>歌手 : <text>{{artist.name}}（{{artist.alias[0]}}）</text></view>
+								<view>歌曲：{{artist.musicSize}} <text>专辑:{{artist.albumSize}}</text> <text>mv:{{artist.mvSize}}</text></view>
+							</view>
+						</view>
+			<!-- 专辑信息显示 -->
+						<view class="box4" data-arr1="{{arr1}}" bindtap="goalbum">
+							<view class="box5">
+								<image class="img1" src="{{arr1.blurPicUrl}}"></image>
+							</view>
+							<view>
+								<view class="fontsize1">{{arr1.type}}: <text>{{arr1.name}}</text></view>
+							</view>
+						</view>
+					</view>
+				</view>
+		<!-- 单曲 -->
+				<view class="top">
+					<view class="t">
+						<view class="n-top">
+							<view>单曲</view>
+						</view>
+						<view class="bg" bindtap="gonewsong">播放全部</view>
+					</view>
+				</view>
+			<!-- 单曲列表 -->
+				<view class="song" wx:for="{{songs}}" wx:key="index">
+					<view class="left">
+						<view>
+							<image class="leftpick" src="{{item.al.picUrl}}"></image>
+						</view>
+						<view>
+							<view class="name">{{item.name}}</view>
+							<view class="titil">{{item.ar[0].name}}/{{item.ar[1].name}}--{{item.al.name}}</view>
+						</view>
+					</view>
+				</view>
+				<!-- 查看全部999+单曲 -->
+				<view class="weiba">
+					<view> {{song.moreText}}</view>
+				</view>
+
+			<!-- 歌单 -->
+				<view class="top">
+					<view class="t">
+						<view class="n-top">
+							<view>歌单</view>
+						</view>
+						<!-- <view class="bg" bindtap="gonewsong">播放全部</view> -->
+					</view>
+				</view>
+				<!-- 歌单列表 -->
+				<view class="sheet_y" wx:for="{{playLists}}" wx:key="key" wx:key="index">
+					<view class="sheet_f">
+						<view class="sheet_g">
+							<image src="{{item.coverImgUrl}}"></image>
+						</view>
+					</view>
+					<view class="sheet_x">
+						<view class="sheet_r">
+							<view class="sheet_w">
+								<view class="name">{{item.name}}</view>
+								<view class="titil"><text>{{item.trackCount}}</text>首 by<text>{{item.creator.nickname}}</text><text>播放 {{item.playCount/10000}}万次</text></view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 查看全部300个歌单 -->
+				<view class="weiba">
+					<view>{{playList.moreText}}</view>
+				</view>
+
+				<!-- 视频 -->
+				<view class="top">
+					<view class="t">
+						<view class="n-top">
+							<view>视频</view>
+						</view>
+						<!-- <view class="bg" bindtap="gonewsong">播放全部</view> -->
+					</view>
+				</view>
+				<!-- 视频列表 -->
+				<view class="sheet_y" wx:for="{{videos}}" wx:key="key" wx:key="index">
+					<view class="sheet_f">
+						<view class="sheet_g">
+							<image src="{{item.coverUrl}}"></image>
+						</view>
+					</view>
+					<view class="sheet_x">
+						<view class="sheet_r">
+							<view class="sheet_w">
+								<view class="name">{{item.title}}</view>
+								<!-- <view >{{playTime}}</view>//播放次数/10000 -->
+								<view class="titil"><text>{{item.playTime}}</text> by<text>{{item.creator[0].userName}}</text></view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 查看全部300个歌单 -->
+				<view class="weiba">
+					<view>{{video.moreText}}</view>
+				</view>
+
+				<!-- 相关搜索-->
+				<view class="top">
+					<view class="t">
+						<view class="n-top">
+							<view>相关搜索</view>
+						</view>
+					</view>
+				</view>
+				<!-- 相关搜索详情 -->
+				<view class="xianguan">
+					<view class="about">
+						<view class="sim" wx:for="{{sim_querys}}" wx:key="index">{{item.keyword}}</view>
+					</view>
+				</view>
+				<!-- mlog-->
+				<view class="top">
+					<view class="t">
+						<view class="n-top">
+							<view>M log</view>
+						</view>
+					</view>
+				</view>
+				<!-- MLog详情 -->
+				<view class="mlog">
+					<view class="mlogbox" wx:for="{{mlogs}}" wx:key='index'>
+						<view class="mlogimg">
+							<image class="mlogimg" src="{{item.resource.shareUrl}}"></image>
+						</view>
+						<view class="mlogfont">{{item.resource.mlogBaseData.text}}</view>
+						<view class="mlogfongt1">
+							<view class="mlogfongt">
+								<view class="mg">
+									<view>
+										<image class="avimg" src="{{item.resource.userProfile.avatarUrl}}"></image>
+									</view>
+									<view>{{item.resource.userProfile.nickname}}</view>
+								</view>
+								<view>{{item.resource.mlogExtVO.likedCount}}赞</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 查看全部200个Mlog -->
+				<view class="weiba">
+					<view>{{mlog.moreText}}</view>
+				</view>
+				<!-- 综合 -->
+			</van-tab>
+			<van-tab title="单曲">
+				<!-- 单曲 -->
+				<!-- 播放头部 -->
+				<view class="top2-1">
+					<view class="top3">
+						<view>
+							<image class="aimg" src="../../images/play.png"></image>
+						</view>
+						<view>播放全部<text class="fontt">（共{{arr.length}}首）</text></view>
+					</view>
+					<view class="top3">
+						<view>
+							<image class="aimg" src="../../images/list.png"></image>
+						</view>
+						<view>多选</view>
+					</view>
+				</view>
+				<!-- 歌单 -->
+				<view class="song" wx:for="{{arr}}" wx:key="index">
+					<view class="left">
+						<!-- <view>
+							<image class="leftpick" src="{{item.album.picUrl}}"></image>
+						</view> -->
+						<view>
+							<view class="name">{{item.name}}</view>
+							<view class="titil">{{item.album.name}}</view>
+						</view>
+					</view>
+					<view class="right">
+						<view>
+							<image class="leftpic" src="../../images/video.png"></image>
+						</view>
+						<view>
+							<image class="leftpic" src="../../images/more.png"></image>
+						</view>
+					</view>
+				</view>
+			</van-tab>
+			<!-- 云村 -->
+			<van-tab title="云村">
+				<!-- 主题-->
+				<view class="top">
+					<view class="t">
+						<view class="n-top">
+							<view>主题</view>
+						</view>
+					</view>
+				</view>
+				<!-- 主题列表 -->
+				<view class="song" wx:for="{{songs}}" wx:key="index">
+					<view class="left">
+						<view>
+							<image class="leftpick" src="{{item.al.picUrl}}"></image>
+						</view>
+						<view>
+							<view class="name">{{item.name}}</view>
+							<view class="titil">{{item.ar[0].name}}/{{item.ar[1].name}}--{{item.al.name}}</view>
+						</view>
+					</view>
+				</view>
+				<!-- mlog-->
+				<view class="top">
+					<view class="t">
+						<view class="n-top">
+							<view>MLog</view>
+						</view>
+					</view>
+				</view>
+				<!-- MLog详情 -->
+				<view class="mlog">
+					<view class="mlogbox" wx:for="{{mlogs}}" wx:key='index'>
+						<view class="mlogimg">
+							<image class="mlogimg" src="{{item.resource.shareUrl}}"></image>
+						</view>
+						<view class="mlogfont">{{item.resource.mlogBaseData.text}}</view>
+						<view class="mlogfongt1">
+							<view class="mlogfongt">
+								<view class="mg">
+									<view>
+										<image class="avimg" src="{{item.resource.userProfile.avatarUrl}}"></image>
+									</view>
+									<view>{{item.resource.userProfile.nickname}}</view>
+								</view>
+								<view>{{item.resource.mlogExtVO.likedCount}}赞</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</van-tab>
+			<!-- 视频 -->
+			<van-tab title="视频">
+				<!-- 视频列表 -->
+				<view class="sheet_y" wx:for="{{arr4}}" wx:key="key" wx:key="index">
+					<view class="sheet_f">
+						<view class="sheet_g">
+							<image src="{{item.coverUrl}}"></image>
+						</view>
+					</view>
+					<view class="sheet_x">
+						<view class="sheet_r">
+							<view class="sheet_w">
+								<view class="name">{{item.title}}</view>
+								<!-- <view >{{playTime}}</view>//播放次数/10000 -->
+								<view class="titil"><text>{{item.playTime}}</text> by<text>{{item.creator[0].userName}}</text></view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</van-tab>
+
+			<van-tab title="歌单">
+				<!-- 歌单列表 -->
+				<view class="sheet_y" wx:for="{{arr3}}" wx:key="key" wx:key="index">
+					<view class="sheet_f">
+						<view class="sheet_g">
+							<image src="{{item.coverImgUrl}}"></image>
+						</view>
+					</view>
+					<view class="sheet_x">
+						<view class="sheet_r">
+							<view class="sheet_w">
+								<view class="name">{{item.name}}</view>
+								<view class="titil"><text>{{item.trackCount}}</text>首 by<text>{{item.creator.nickname}}</text><text>播放 {{item.playCount/10000}}万次</text></view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</van-tab>
+		</van-tabs>
+	</view>
+</view>

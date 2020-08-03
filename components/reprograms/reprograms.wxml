@@ -1,0 +1,15 @@
+
+<view class="top">
+	<view class="t">
+		<view class="n-top">
+			<view>推荐节目</view>
+		</view>
+    <view class="bg">更多节目</view>
+	</view>
+</view>
+<view class="nav" >
+  <view class="imhg" wx:for="{{arr6}}" wx:key="index" data-item="{{item}}" bindtap="golistdetail">
+    <view><image class="img" src="{{item.coverUrl}}"></image></view>
+    <view class="font">{{item.name}}</view>
+  </view>
+</view>

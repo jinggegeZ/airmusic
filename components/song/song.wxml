@@ -1,0 +1,13 @@
+<view class="top">
+  <view class="song">
+    <view>每日推荐</view>
+    <view class="bg" bindtap="gosongsheet">歌单广场</view>
+  </view>
+</view>
+<view class="nav">
+  <view class="imhg" wx:for="{{arr1}}" wx:key="index" data-item="{{item}}" bindtap="golistdetail">
+    <view><image class="img" src="{{item.picUrl}}"></image></view>
+    <view class="n-top"><image class="icon" src="../../images/bfang.png"></image>{{item.playCount}}万</view>
+    <view class="font">{{item.name}}</view>
+  </view>
+</view>

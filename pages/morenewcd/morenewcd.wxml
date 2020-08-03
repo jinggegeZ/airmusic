@@ -1,0 +1,31 @@
+<view class="top">
+	<view class="t">
+		<view class="n-top">
+			<view>数字专辑</view>
+		</view>
+    <view class="bg">更多专辑</view>
+	</view>
+</view>
+<view class="nav" >
+  <view class="imhg" wx:for="{{arr}}" wx:key="index">
+    <image class="img" src="{{item.picUrl}}"></image>
+    <image class="bgd" src="../../images/coverall.png"></image>
+    <view class="font">{{item.name}}</view>
+  </view>
+</view>
+<view class="top1">
+	<view class="t">
+		<view class="n-top">
+			<view>本周新碟</view>
+		</view>
+    <!-- <view class="bg">更多专辑</view> -->
+	</view>
+</view>
+<view class="nav" >
+  <view class="imhg1" wx:for="{{arr1}}" wx:key="index">
+  <image class="img1" src="{{item.picUrl}}"></image>
+    <image class="bgd1" src="../../images/coverall.png"></image>
+    <view class="font">{{item.name}}</view>
+    <view class="font1">{{item.company}}</view>
+  </view>
+</view>

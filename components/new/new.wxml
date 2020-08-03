@@ -1,0 +1,23 @@
+<!-- 新碟新歌 -->
+<view class="top">
+	<view class="t">
+		<view class="n-top">
+			<view class="newsong {{flag === 0? 'active' :''}}" bindtap="die">新碟</view>
+			<view class="{{flag === 1? 'active' :''}}" bindtap="song">新歌</view>
+		</view>
+		<view class="bg" wx:if="{{flag === 0}}" bindtap="gomorenewcd">更多新碟</view>
+    <view class="bg" wx:if="{{flag === 1}}" bindtap="gomorenewsong">新歌推荐</view>
+	</view>
+</view>
+<view class="nav" wx:if="{{flag === 0}}">
+  <view class="imhg" wx:for="{{arr3}}" wx:key="index" data-item="{{item}}" bindtap="goalbum">
+    <view><image class="img" src="{{item.picUrl}}"></image></view>
+    <view class="font">{{item.name}}</view>
+  </view>
+</view>
+<view class="nav" wx:if="{{flag === 1}}">
+  <view class="imhg" wx:for="{{arr4}}" wx:key="index" bindtap="gomusicplaying" data-arr4="{{arr4}}" data-item="{{item}}" data-index="{{index}}">
+    <view><image class="img" src="{{item.album.picUrl}}"></image></view>
+    <view class="font">{{item.name}}</view>
+  </view>
+</view>

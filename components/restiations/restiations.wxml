@@ -1,0 +1,14 @@
+<view class="top">
+	<view class="t">
+		<view class="n-top">
+			<view>推荐电台</view>
+		</view>
+    <view class="bg" bindtap="goradiostation">电台广场</view>
+	</view>
+</view>
+<view class="nav" >
+  <view class="imhg" wx:for="{{arr5}}" wx:key="index" bindtap="golistdetail" data-item="{{item}}">
+    <view><image class="img" src="{{item.picUrl}}"></image></view>
+    <view class="font">{{item.name}}</view>
+  </view>
+</view>

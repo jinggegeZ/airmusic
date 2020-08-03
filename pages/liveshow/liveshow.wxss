@@ -1,0 +1,109 @@
+
+.video{
+  background-color: #f5f5f5;
+  font-size: 32rpx;
+}
+.video_a{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 30rpx 0;
+  margin-bottom: 40rpx;
+}
+.video_b{
+  width: 94%;
+}
+.video_c{
+  width: 100%;
+  height: 400rpx;
+  background-color: pink;
+  position: relative;
+}
+.video_part{
+  width: 100%;
+  height: 100%;
+}
+.video_d{
+  position: absolute;
+  left: 3%;
+  top: 5%;
+  width: 94%;
+  height: 90%;
+  z-index: 3;
+  color: white;
+
+}
+.video_f{
+  display: flex;
+  justify-content: center;
+}
+.video_i{
+  padding: 30rpx 0;
+}
+.top {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.t {
+  width: 95%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.n-top {
+  display: flex;
+  align-items: flex-end;
+}
+.weiba {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+/* mlog详情 */
+.mlog {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mg {
+  display: flex;
+  align-items: center;
+}
+.mlogbox {
+  width: 50%;
+  height: 350rpx;
+  border-radius: 10rpx;
+}
+.mlogimg {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mlogimg1 {
+  width: 95%;
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mlogimg video {
+  width: 95%;
+  height: 100px;
+}
+.mlfont {
+  font-size: 12px;
+  color: rgba(0,0,0,0.5);
+}

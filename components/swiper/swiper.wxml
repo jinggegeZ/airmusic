@@ -1,0 +1,11 @@
+<!-- 轮播 -->
+ <view class="rotationChart">
+    <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+      <swiper-item wx:for="{{arr}}" wx:key="index" class="swiper-item">
+        <view class="a">
+        <image class="swiper-image" src="{{item.pic}}" mode="widthFix" />
+        <view class="bot">{{item.typeTitle}}</view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>

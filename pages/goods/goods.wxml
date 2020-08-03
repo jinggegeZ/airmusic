@@ -1,0 +1,49 @@
+	<!-- 图片渲染 -->
+		<view class="top">
+			<view class="nav">
+				<image class="img" src="../../images/goods.jpg"></image>
+			</view>
+			<view class="foot">
+				<view class="font">{{time}}</view>
+				<view class="font1">历史日推</view>
+			</view>
+		</view>
+		<view class="top1">
+			<view class="top2">
+				<!-- 播放头部 -->
+				<view class="top2-1">
+					<view class="top3">
+						<view>
+							<image class="aimg" src="../../images/play.png"></image>
+						</view>
+						<view>播放全部<text class="fontt">（共{{arr.length}}首）</text></view>
+					</view>
+					<view class="top3">
+						<view>
+							<image class="aimg" src="../../images/list.png"></image>
+						</view>
+						<view>多选</view>
+					</view>
+				</view>
+				<!-- 歌单 -->
+				<view class="song" wx:for="{{arr}}" wx:key="index">
+					<view class="left">
+						<view>
+							<image class="leftpick" src="{{item.album.picUrl}}"></image>
+						</view>
+						<view>
+							<view class="name">{{item.artists[0].name}}</view>
+							<view class="titil">{{item.name}}</view>
+						</view>
+					</view>
+					<view class="right">
+						<view>
+							<image class="leftpic" src="../../images/video.png"></image>
+						</view>
+						<view>
+							<image class="leftpic" src="../../images/more.png"></image>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>

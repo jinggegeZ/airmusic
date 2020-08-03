@@ -1,0 +1,325 @@
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content-c {
+  width: 95%;
+}
+
+.top1 {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.img {
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.ipt {
+  width: 90%;
+  height: 100rpx;
+  /* background: skyblue; */
+  line-height: 100rpx;
+  border-bottom: 1px solid #dddddd;
+
+}
+
+.ipt input {
+  height: 100rpx;
+  font-size: 14px;
+}
+
+.box1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.box2 {
+  width: 90%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.box3 {
+  width: 90%;
+}
+
+.box4 {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.box5 {
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: skyblue;
+  margin-right: 10rpx;
+}
+
+.img1 {
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.fontsize {
+  font-size: 14px;
+  margin-left: 22rpx;
+}
+
+.fontsize1 {
+  font-size: 14px;
+  margin-top: 22rpx;
+  margin-left: 22rpx;
+}
+
+/* 单曲 */
+.top {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.t {
+  width: 95%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.n-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+.bg {
+  width: 150rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  font-size: 14px;
+  border: 1px solid #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 歌单 */
+.song {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+}
+.leftpic {
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftpick {
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+  border-radius: 10rpx;
+}
+
+.name {
+  font-size: 14px;
+}
+
+.titil {
+  font-size: 12px;
+  margin-top: 10rpx;
+}
+
+/* 查看全部 */
+.weiba {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* 歌单列表 */
+.sheet_y {
+  display: flex;
+  align-items: center;
+}
+
+.sheet_f {
+  width: 31%;
+  /* margin-bottom: 30rpx; */
+}
+
+.sheet_g image {
+  width: 80%;
+  height: 160rpx;
+  border-radius: 5rpx;
+}
+
+.sheet_z {
+  position: absolute;
+  left: 30rpx;
+  bottom: 20rpx;
+  font-size: 24rpx;
+  color: white;
+  z-index: 2;
+}
+
+.sheet_x {
+  width: 64%;
+  line-height: 58rpx;
+  display: flex;
+  align-items: center;
+}
+
+.sheet_w {
+  color: #666666;
+
+  font-size: 14px;
+}
+.xianguan {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.about {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sim {
+  font-size: 14px;
+  background-color: #dddddd;
+  height: 50rpox;
+  padding: 10rpx;
+  border-radius: 15rpx;
+  margin: 10rpx;
+}
+/* mlog详情 */
+.mlog {
+  width: 100%;
+  display: flex;
+}
+.mg {
+  display: flex;
+  align-items: center;
+}
+.mlogbox {
+  width: 50%;
+  height: 350rpx;
+  border-radius: 10rpx;
+}
+.mlogimg {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mlogfont {
+  flex-wrap: wrap;
+  font-size: 14px;
+  height: 90rpx;
+}
+.mlogfongt {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.mlogfongt1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.avimg {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 单曲 */
+.top2-1 {
+  display: flex;
+  justify-content: space-between;
+}
+.top3 {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+.aimg {
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10rpx;
+}
+.fontt{
+  font-size: 12px;
+}
+.song {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+/* .leftpick {
+  width: 100rpx;
+  height:100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+  border-radius: 10rpx;
+} */

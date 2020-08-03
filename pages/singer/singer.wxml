@@ -1,0 +1,130 @@
+<view>
+<van-tabs animated bind:change="onChange">
+  <van-tab title="热门">
+  	<view class="singer">
+				<view class="singer_a">
+					<view class="singer_b" wx:for="{{hot}}" wx:key="index" >
+						<view class="singer_c" bindtap="gostart" data-item="{{item}}">
+              <image class="singer_d" src="{{item.picUrl}}"></image>
+              {{item.name}}
+              <image wx:if="{{item.alias == ''}}" class="singer_e" src="../../images/people.png"></image>
+						</view>
+						<view class="singer_f">
+              <text>+</text> 关注
+						</view>
+					</view>
+				</view>
+			</view>
+  </van-tab>
+  <van-tab title="华语">
+  <view class="singer">
+				<view class="singer_a">
+        <view class="singer_g">
+         <view bindtap="male">男</view>
+         <view bindtap="female">女</view>
+         <view bindtap="bank">乐队组合</view>
+        </view>
+        <!-- 歌手列表 -->
+					<view class="singer_b" wx:for="{{china}}" wx:key="index">
+						<view class="singer_c" bindtap="gostart" data-item="{{item}}">
+              <image class="singer_d" src="{{item.picUrl}}"></image>
+              {{item.name}}
+              <image wx:if="{{item.alias == ''}}" class="singer_e" src="../../images/people.png"></image>
+						</view>
+						<view class="singer_f">
+              <text>+</text> 关注
+						</view>
+					</view>
+				</view>
+			</view>
+  </van-tab>
+  <van-tab title="欧美">
+    <view class="singer">
+				<view class="singer_a">
+        <view class="singer_g">
+         <view bindtap="male">男</view>
+         <view bindtap="female">女</view>
+         <view bindtap="bank">乐队组合</view>
+        </view>
+        <!-- 歌手列表 -->
+					<view class="singer_b" wx:for="{{china}}" wx:key="index">
+						<view class="singer_c" bindtap="gostart" data-item="{{item}}">
+              <image class="singer_d" src="{{item.picUrl}}"></image>
+              {{item.name}}
+              <image wx:if="{{item.alias == ''}}" class="singer_e" src="../../images/people.png"></image>
+						</view>
+						<view class="singer_f">
+              <text>+</text> 关注
+						</view>
+					</view>
+				</view>
+			</view>
+  </van-tab>
+  <van-tab title="日本">
+    <view class="singer">
+				<view class="singer_a">
+        <view class="singer_g">
+         <view bindtap="male">男</view>
+         <view bindtap="female">女</view>
+         <view bindtap="bank">乐队组合</view>
+        </view>
+        <!-- 歌手列表 -->
+					<view class="singer_b" wx:for="{{china}}" wx:key="index">
+						<view class="singer_c" bindtap="gostart" data-item="{{item}}">
+              <image class="singer_d" src="{{item.picUrl}}"></image>
+              {{item.name}}
+              <image wx:if="{{item.alias == ''}}" class="singer_e" src="../../images/people.png"></image>
+						</view>
+						<view class="singer_f">
+              <text>+</text> 关注
+						</view>
+					</view>
+				</view>
+			</view>
+  </van-tab>
+  <van-tab title="韩国">
+    <view class="singer">
+				<view class="singer_a">
+        <view class="singer_g">
+         <view bindtap="male">男</view>
+         <view bindtap="female">女</view>
+         <view bindtap="bank">乐队组合</view>
+        </view>
+        <!-- 歌手列表 -->
+					<view class="singer_b" wx:for="{{china}}" wx:key="index" >
+						<view class="singer_c" bindtap="gostart" data-item="{{item}}"> 
+              <image class="singer_d" src="{{item.picUrl}}"></image>
+              {{item.name}}
+              <image wx:if="{{item.alias == ''}}" class="singer_e" src="../../images/people.png"></image>
+						</view>
+						<view class="singer_f">
+              <text>+</text> 关注
+						</view>
+					</view>
+				</view>
+			</view>
+  </van-tab>
+  <van-tab title="其他">
+    <view class="singer">
+				<view class="singer_a">
+        <view class="singer_g">
+         <view bindtap="male">男</view>
+         <view bindtap="female">女</view>
+         <view bindtap="bank">乐队组合</view>
+        </view>
+        <!-- 歌手列表 -->
+					<view class="singer_b" wx:for="{{china}}" wx:key="index">
+						<view class="singer_c" bindtap="gostart" data-item="{{item}}">
+              <image class="singer_d" src="{{item.picUrl}}"></image>
+              {{item.name}}
+              <image wx:if="{{item.alias == ''}}" class="singer_e" src="../../images/people.png"></image>
+						</view>
+						<view class="singer_f">
+              <text>+</text> 关注
+						</view>
+					</view>
+				</view>
+			</view>
+  </van-tab>
+</van-tabs>
+</view>

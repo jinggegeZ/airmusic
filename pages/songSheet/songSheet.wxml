@@ -1,0 +1,63 @@
+<van-tabs animated bind:change="onChange">
+	<van-tab title="推荐">
+		<view class="rotationChart">
+			<swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+				<swiper-item wx:for="{{arr}}" wx:key="index" class="swiper-item" data-item="{{item}}" bindtap="golistdetail">
+					<view class="a">
+						<image class="swiper-image" src="{{item.coverImgUrl}}" mode="widthFix" />
+					</view>
+				</swiper-item>
+			</swiper>
+		</view>
+		<view class="nav">
+			<view class="imhg" wx:for="{{arr1}}" wx:key="index" data-item="{{item}}" bindtap="golistdetail">
+				<view>
+					<image class="img" src="{{item.coverImgUrl}}"></image>
+				</view>
+				<view class="n-top">
+					<image class="icon" src="../../images/bfang.png"></image>{{item.playCount}}万
+				</view>
+				<view class="font">{{item.name}}</view>
+			</view>
+		</view>
+	</van-tab>
+	<van-tab title="官方">
+		<view class="nav">
+			<view class="imhg" wx:for="{{arr3}}" wx:key="index" data-item="{{item}}" bindtap="golistdetail">
+				<view>
+					<image class="img" src="{{item.coverImgUrl}}"></image>
+				</view>
+				<view class="n-top">
+					<image class="icon" src="../../images/bfang.png"></image>{{item.playCount}}万
+				</view>
+				<view class="font">{{item.name}}</view>
+			</view>
+		</view>
+	</van-tab>
+	<van-tab title="精品">
+		<view class="nav">
+			<view class="imhg" wx:for="{{arr2}}" wx:key="index" data-item="{{item}}" bindtap="golistdetail">
+				<view>
+					<image class="img" src="{{item.coverImgUrl}}"></image>
+				</view>
+				<view class="n-top">
+					<image class="icon" src="../../images/bfang.png"></image>{{item.playCount}}万
+				</view>
+				<view class="font">{{item.name}}</view>
+			</view>
+		</view>
+	</van-tab>
+	<van-tab title="华语">
+		<view class="nav">
+			<view class="imhg" wx:for="{{arr4}}" wx:key="index" data-item="{{item}}" bindtap="golistdetail">
+				<view>
+					<image class="img" src="{{item.coverImgUrl}}"></image>
+				</view>
+				<view class="n-top">
+					<image class="icon" src="../../images/bfang.png"></image>{{item.playCount}}万
+				</view>
+				<view class="font">{{item.name}}</view>
+			</view>
+		</view>
+	</van-tab>
+</van-tabs>

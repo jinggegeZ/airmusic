@@ -1,0 +1,15 @@
+<view class="top">
+	<view class="t">
+		<view class="n-top">
+			<view>音乐新势力</view>
+		</view>
+    <view class="bg" bindtap="gonewsong">新音乐</view>
+	</view>
+</view>
+<view class="nav" >
+  <view class="imhg" wx:for="{{arr2}}" wx:key="index" bindtap="gomusicplaying" data-arr2="{{arr2}}" data-item="{{item}}" data-index="{{index}}">
+    <view><image class="img" src="{{item.picUrl}}"></image></view>
+    <view class="font">{{item.name}}</view>
+  </view>
+</view>
+

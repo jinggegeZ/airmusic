@@ -1,0 +1,75 @@
+		<view class="top">
+			<image class="top_a" src="{{ album.blurPicUrl}}"></image>
+			<view class="top_b">
+				<view class="top_c">
+					<view class="topc-c">
+						<view class="top_d">
+							<image src="{{album.blurPicUrl}}"></image>
+						</view>
+						<view class="topd">
+							<view class="fonttopd">{{album.name}}</view>
+							<!-- 歌手点击事件 data-item="{{item}}" bindtap="gosinger" -->
+              <view class="fonttopd1"> 歌手：{{album.artist.name}}</view>
+              <view class="fonttopd1">发布时间：{{publishTime}}</view>
+							<view class="fonttopd1">{{album.description}}</view>
+						</view>
+					</view>
+					<view class="mes_part">
+						<view>
+							<view>
+								<image class="img" src="../../images/pinglun.png"></image>
+							</view>
+							<view>123</view>
+						</view>
+						<view>
+							<view>
+								<image class="img" src="../../images/fenxiang.png"></image>
+							</view>
+							<view>123</view>
+						</view>
+						<view>
+							<view>
+								<image class="img" src="../../images/xaizai.png"></image>
+							</view>
+							<view>下载</view>
+						</view>
+						<view>
+							<view>
+								<image class="img" src="../../images/duoxuan.png"></image>
+							</view>
+							<view>多选</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!--  -->
+		<view class="my">
+			<view class="my_a">
+				<view class="my_b">
+					<view class="top2">
+						<view class="t2">
+							<view class="n-top2">
+								<view data-songs="{{songs}}" bindtap="goMusicplaying">播放全部{{songs.length}}首歌曲</view>
+							</view>
+							<view class="bg2">收藏</view>
+						</view>
+					</view>
+					<view class="box2" wx:for="{{songs}}" wx:key="index" bindtap="gomusicplaying" data-songs="{{songs}}" data-item="{{item}}" data-index="{{index}}">
+						<!-- <view class="fontbox2">{{index+1}}</view> -->
+						<view class="box3">
+							<view class="box3font1">{{item.name}}<text wx:if="{{item.alia[0]}}">（{{item.alia[0]}}）</text></view>
+							<view class="box3font">{{item.ar[0].name}} <text>{{item.ar[1].name}}</text></view>
+						</view>
+						<view class="right">
+						<view>
+							<image class="leftpic" src="../../images/video.png"></image>
+						</view>
+						<view>
+							<image class="leftpic" src="../../images/more.png"></image>
+						</view>
+					</view>
+					</view>
+				</view>
+			</view>
+		</view>
